@@ -23,7 +23,7 @@ function variables()
         var index = i; //although it lies inside a loop, but it is accessible in the whole function
     }
 
-    console.log("sum="+sum+" global="+global+" index="+index);
+    console.log("sum="+sum+" global="+global+" index="+index); //sum = 3 globla=10 index=2
 }
 variables();
 ```
@@ -47,6 +47,19 @@ function variablesLet()
 variablesLet();
 ```
 
+### const
+const is a keyword in JavaScript that is used to declare a variable with a constant value. Once a variable is declared with const, its value cannot be changed or reassigned throughout the rest of the code. In other words, const creates a variable that is read-only.
+
+Variables declared with const are block-scoped. This means they are only accessible within the block of code they are declared in.
+
+You cannot declare a const variable without assigning it a value.
+
+```
+const a = 10;
+a = 20;
+console.log(a);
+```
+
 ## Functions as object
 In JavaScript, functions are first-class objects, which means they can be treated like any other object. They have properties and methods just like regular objects.
 
@@ -56,4 +69,22 @@ function myFunction() //myFunction is a object
     // Function body
 }
 myFunction(); // Using the function name to call the function
+```
+
+```
+const product=function(p,q)
+{
+    ans = p*q;
+    console.log(ans);
+}
+product(1,2); //2
+```
+
+```
+const product=function(p,q)
+{
+    product.ans = p*q;
+    console.log(product.ans);
+}
+product(1,2); //2
 ```
