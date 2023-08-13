@@ -49,3 +49,21 @@ setTimeout(()=>{
 },10000);
 ```
 
+## CLOCK
+
+```
+const clock=(text)=>
+{
+    let date = new Date();
+
+    let time = date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+
+    console.log(text+" "+time);
+}
+
+const ref2 = setInterval(clock, 10000, "Time");
+
+setTimeout(()=>{
+    clearInterval(ref2);
+},1000000);
+```
