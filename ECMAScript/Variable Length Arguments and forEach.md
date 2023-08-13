@@ -52,3 +52,29 @@ let args2 = (... array)=>
 }
 args2(1,2,3,4,5,6,7,8,9);
 ```
+
+## EXTRACTING ONLY EVEN VALUES AND STORING IN NEW ARRAY
+
+```
+const even = []; //This code snippet declares a constant array variable named even and initializes it with an empty array.
+let evenArgs = (... array)=>
+{
+
+    array.forEach(function(value, index){
+        if(value%2==0)
+        {
+            // console.log(value+" "+index);
+            even.push(value); //The code even.push(1); adds the value 1 to the end of the array stored in the even variable. 
+        }
+        
+    })
+}
+console.time();
+evenArgs(1,2,3,4,5,6,7,8,9);
+console.log("EVEN ARRAY VALUES");
+console.log(even); //OUTPUT [ 2, 4, 6, 8 ]
+console.log(even.pop()); // OUTPUT 8
+console.log(even); //OUTPUT [ 2, 4, 6]
+console.timeEnd();
+
+```
