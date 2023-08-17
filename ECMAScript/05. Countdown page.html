@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+</head>
+<body>
+    
+    <div class="row" style="display: flex; justify-content: center; margin: 3vw; padding: 1vw;">
+
+        <div class="col">
+
+            <span style="font-size: large; margin: 3vw;">
+                COUNTDOWN
+            </span>            
+
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; justify-content: center; margin: 3vw; padding: 1vw;">
+
+        <div class="col">
+
+            <span>Type Input</span> <br>
+            <input type="number" name="time" id="time">
+
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; justify-content: center; margin: 3vw; padding: 1vw;">
+
+        <div class="col" style="border: 1px solid black; padding: 2vw;">
+
+            <span id="show" style="font-size: larger;"></span>
+
+        </div>
+    </div>
+
+    <div class="row" style="display: flex; justify-content: center; margin: 3vw; padding: 1vw;">
+
+        <div class="col">
+
+            <input type="submit" value="START COUNTDOWN" id="start">
+
+        </div>
+    </div>
+
+    <script>
+
+
+        // const startCountdown=()=>
+        // {
+        //     var count = document.getElementById("time");
+        //     document.getElementById("show").innerHTML = count + "";
+
+        //     count--;
+
+        //     if(count==0)
+        //     {
+        //         document.querySelector("#start").disable=true;
+        //     }
+        // }
+        
+
+        document.getElementById("start").addEventListener('click',()=>
+        {
+            alert();
+            var count = document.getElementById("time").value;
+            var toview = document.getElementById("show");
+
+            const interval = setInterval(()=>
+            {
+                toview.innerHTML = count;
+
+                count--;
+
+                if(count==0)
+                {
+                    clearInterval(interval);
+                    toview.innerHTML = "Completed";
+                }
+            },1000);
+
+            document.querySelector("#start").disable=true;
+            
+        });
+
+        // (
+        //     ()=>
+        //     {
+        //         var ref = setInterval(startCountdown,1000);
+
+        //         setTimeout(
+        //             ()=>
+        //             {
+        //                 clearInterval();
+        //             }, 10000
+        //         );
+        //     }
+        // )();
+
+    </script>
+
+
+</body>
+</html>
