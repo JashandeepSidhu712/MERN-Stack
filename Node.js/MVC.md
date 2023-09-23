@@ -12,6 +12,9 @@ The View is responsible for **rendering the user interface (UI)** and **presenti
 ### Controller
 The Controller acts as an intermediary between the Model and the View. It **handles user input, processes it, interacts** with the Model to retrieve or update data, and updates the View accordingly.
 
+![image](https://github.com/JashandeepSidhu712/MERN-Stack/assets/117754690/cb832c0e-a150-411b-b69b-9db85947f471)
+
+
 # WHY IS IT REQUIRED?
 
 ### Separation of Concerns
