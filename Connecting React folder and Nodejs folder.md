@@ -22,7 +22,14 @@ Start Nodejs Server
 ```
 node file_name.js
 ```
+## AXIOSS
+Axios is a popular JavaScript library used for making HTTP requests from a web browser or Node.js. 
 
+It provides a simple and easy-to-use API for sending and receiving data from web services or APIs. 
+
+Axios is often used in frontend applications, including React, Vue.js, and Angular, as well as in backend Node.js applications.
+
+## PROCESS 2 WITHOUT PIC WITHOUT POST
 
 
 
